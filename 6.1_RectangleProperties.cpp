@@ -5,7 +5,9 @@ using namespace std;
 
 void getLengthWidth(double& length, double& width)
 {
-	// Code here, inputs for length and width.
+	cout << "Enter a LENGTH and WIDTH for this rectangle: " << endl;
+	cin >> length; 
+	cin >> width;
 }
 
 void calcPerimeter()
