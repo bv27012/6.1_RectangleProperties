@@ -8,24 +8,34 @@ void getLengthWidth(double& length, double& width)
 	cout << "Enter a LENGTH and WIDTH for this rectangle: " << endl;
 	cin >> length; 
 	cin >> width;
+	cout << endl;
 }
 
-void calcPerimeter()
+double calcPerimeter(double length, double width)
 {
-	// Code here, meant to calculate 2 * (length * width).
+	return 2 * (length + width);
 }
 
-void calcArea()
+double calcArea(double length, double width)
 {
-	// Code here, meant to calculate length * width.
+	return length * width;
 }
 
-void displayProperties()
+void displayProperties(double length, double width)
 {
-	// Code here, meant to display all above calculations and values.
+	cout << "LENGTH: " << length << endl;
+	cout << "WIDTH: " << width << endl;
+	cout << "PERIMETER: " << calcPerimeter(length, width) << endl;
+	cout << "AREA: " << calcArea(length, width) << endl;
 }
 
 int main()
 {
-	// display displayProperties().
+	double length, width;
+
+	getLengthWidth(length, width);
+	displayProperties(length, width);
+
+	return 0;
+
 }
